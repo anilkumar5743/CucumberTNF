@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Factory.Driverfactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -13,27 +14,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Login {
-WebDriver driver;
-	
+	WebDriver driver;
 
-	@Before
-	public void setup() {
-		 driver = new ChromeDriver();	
-		
-}
-	@After
-	public void teardown() {
-		driver.quit();
-	}
 	
 	@Given("User has navigate to login page")
 	public void User_has_navigate_to_login_page() {
+		driver =Driverfactory.getdriver();
 		driver.findElement(By.xpath("//span[text()='My Account']"));
 		driver.findElement(By.linkText("Login")).click();
 		
 		
 	}
-	@When("User has entered valid emilid {string} into email field")
+	@When("User has entered valid emailid {string} into email field")
 	public void user_has_entered_valid_emailid_into_email_field(String email)
 		{
 		driver.findElement(By.id("input-email")).sendKeys(email);

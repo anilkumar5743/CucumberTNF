@@ -10,7 +10,9 @@ public class Myhooks {
 	WebDriver driver;
 	@Before
 	public void setup() {
-		 driver=Driverfactory.initilizebrowser();
+		Driverfactory.initilizebrowser();
+	
+		driver= Driverfactory.getdriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.get("https://tutorialsninja.com/demo/");

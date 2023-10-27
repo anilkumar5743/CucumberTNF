@@ -6,7 +6,6 @@ When User enter below feilds
 |firstname |chinna|
 |lastname  |kadiyala|
 |email     |anilkumar.marolix@gmail.com|
-|email     |anilkumar.marolix@gmail.com|
 |Telephone |1234567890|
 |password  |Anilkumar|
 And User select policy

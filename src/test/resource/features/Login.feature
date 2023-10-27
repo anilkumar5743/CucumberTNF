@@ -2,7 +2,7 @@ Feature: Login Functionality
 
 Scenario: Login with valid data
 Given User has navigate to login page
-When User has entered valid emil  "anilkumar.marolix@gmail.com" into email field
+When User has entered valid emailid  "anilkumar.marolix@gmail.com" into email field
 And User has valid password "Anilkumar" into password field
 And user has to click on Login button
 Then user should get logged in 
